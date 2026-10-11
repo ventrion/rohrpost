@@ -1,5 +1,7 @@
 # rohrpost
 
+![Rohrpost logo](docs/assets/rohrpost-logo.png)
+
 > A git-native ticket system for agentic coding workflows.
 
 `rohrpost` keeps work items as files in the repository they belong to. Coding

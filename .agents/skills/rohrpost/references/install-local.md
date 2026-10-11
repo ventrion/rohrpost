@@ -30,15 +30,15 @@ is not restored. The binary lives at `$ROHRPOST_HOME/bin/rp`.
 ## Provision
 
 Preferred: a prebuilt release. Releases are published at
-`https://github.com/code-factorio/rohrpost/releases`, one archive per target
+`https://github.com/ventrion/rohrpost/releases`, one archive per target
 (`rp-<tag>-<target>.tar.gz`). Pick the target for the machine:
 `x86_64-unknown-linux-musl`, `aarch64-unknown-linux-musl`,
 `aarch64-apple-darwin` or `x86_64-apple-darwin`. Require `curl` and `tar`.
 
 ```bash
 mkdir -p "$ROHRPOST_HOME/bin"
-tag="$(curl -fsSL https://api.github.com/repos/code-factorio/rohrpost/releases/latest | sed -n 's/.*"tag_name": *"\([^"]*\)".*/\1/p')"
-curl -fsSL "https://github.com/code-factorio/rohrpost/releases/download/$tag/rp-$tag-<target>.tar.gz" \
+tag="$(curl -fsSL https://api.github.com/repos/ventrion/rohrpost/releases/latest | sed -n 's/.*"tag_name": *"\([^"]*\)".*/\1/p')"
+curl -fsSL "https://github.com/ventrion/rohrpost/releases/download/$tag/rp-$tag-<target>.tar.gz" \
   | tar -xz -C "$ROHRPOST_HOME/bin" --strip-components=1 "rp-$tag-<target>/rp"
 chmod +x "$ROHRPOST_HOME/bin/rp"
 ```
@@ -50,7 +50,7 @@ Fallback when no release matches the machine or the network blocks GitHub
 release downloads but a Rust toolchain (1.89+) is available:
 
 ```bash
-cargo install --git https://github.com/code-factorio/rohrpost --locked --root "$ROHRPOST_HOME"
+cargo install --git https://github.com/ventrion/rohrpost --locked --root "$ROHRPOST_HOME"
 ```
 
 `cargo install --root` places the binary at `$ROHRPOST_HOME/bin/rp`. If neither

@@ -1,6 +1,6 @@
 # Issue tracker: Rohrpost
 
-Issues and specs for this repo live in **[Rohrpost](https://github.com/code-factorio/rohrpost)**, a git-native tracker. Tickets are events in `.rohrpost/log.jsonl`, committed with the code — there is no external service to reach for and no daemon to run, so the tracker branches and merges exactly like the code does.
+Issues and specs for this repo live in **[Rohrpost](https://github.com/ventrion/rohrpost)**, a git-native tracker. Tickets are events in `.rohrpost/log.jsonl`, committed with the code — there is no external service to reach for and no daemon to run, so the tracker branches and merges exactly like the code does.
 
 ## Invoking `rp`
 

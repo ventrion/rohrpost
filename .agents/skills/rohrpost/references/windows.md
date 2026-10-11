@@ -21,15 +21,15 @@ The binary lives at `<home>\bin\rp.exe`.
 ## Provision
 
 Preferred: the prebuilt release for `x86_64-pc-windows-msvc`, published at
-`https://github.com/code-factorio/rohrpost/releases` as
+`https://github.com/ventrion/rohrpost/releases` as
 `rp-<tag>-x86_64-pc-windows-msvc.zip`.
 
 ```powershell
 $rohrpostHome = if ($env:ROHRPOST_HOME) { $env:ROHRPOST_HOME } else { Join-Path $env:LOCALAPPDATA 'rohrpost' }
 New-Item -ItemType Directory -Force -Path (Join-Path $rohrpostHome 'bin') | Out-Null
-$tag = (Invoke-RestMethod https://api.github.com/repos/code-factorio/rohrpost/releases/latest).tag_name
+$tag = (Invoke-RestMethod https://api.github.com/repos/ventrion/rohrpost/releases/latest).tag_name
 $zip = Join-Path $env:TEMP "rp-$tag.zip"
-Invoke-WebRequest "https://github.com/code-factorio/rohrpost/releases/download/$tag/rp-$tag-x86_64-pc-windows-msvc.zip" -OutFile $zip
+Invoke-WebRequest "https://github.com/ventrion/rohrpost/releases/download/$tag/rp-$tag-x86_64-pc-windows-msvc.zip" -OutFile $zip
 Expand-Archive $zip -DestinationPath $env:TEMP -Force
 Copy-Item (Join-Path $env:TEMP "rp-$tag-x86_64-pc-windows-msvc\rp.exe") (Join-Path $rohrpostHome 'bin\rp.exe') -Force
 ```
@@ -38,7 +38,7 @@ Record the tag that was installed. Fallback when a Rust toolchain (1.89+) is
 available and the release cannot be downloaded:
 
 ```powershell
-cargo install --git https://github.com/code-factorio/rohrpost --locked --root $rohrpostHome
+cargo install --git https://github.com/ventrion/rohrpost --locked --root $rohrpostHome
 ```
 
 `cargo install --root` places the binary at `<home>\bin\rp.exe`. If neither

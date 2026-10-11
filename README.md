@@ -33,13 +33,13 @@ See [`docs/spec/ROHRPOST-SPEC.md`](docs/spec/ROHRPOST-SPEC.md) for the full desi
 
 Prebuilt binaries for Linux (x86_64, aarch64), macOS (Apple silicon, Intel)
 and Windows (x86_64) are attached to every
-[GitHub release](https://github.com/code-factorio/rohrpost/releases). Put `rp`
+[GitHub release](https://github.com/ventrion/rohrpost/releases). Put `rp`
 (or `rp.exe`) on your `PATH`; it has no runtime requirements.
 
 From source (Rust 1.89 or newer):
 
 ```bash
-cargo install --git https://github.com/code-factorio/rohrpost --locked
+cargo install --git https://github.com/ventrion/rohrpost --locked
 ```
 
 ## Quick start
@@ -128,4 +128,4 @@ Keep the crate dependency-free: `rp` runs in bare agent containers.
 
 ## License
 
-[MIT](./LICENSE) © code-factorio
+[MIT](./LICENSE) © ventrion

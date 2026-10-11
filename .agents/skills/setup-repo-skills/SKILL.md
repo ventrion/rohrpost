@@ -44,7 +44,7 @@ Default posture: these skills were designed for GitHub. If a `git remote` points
 
 - **GitHub**: issues live in the repo's GitHub Issues (uses the `gh` CLI)
 - **GitLab**: issues live in the repo's GitLab Issues (uses the [`glab`](https://gitlab.com/gitlab-org/cli) CLI)
-- **Rohrpost**: issues live in the repo itself as an append-only event log under `.rohrpost/` (uses the [`rp`](https://github.com/code-factorio/rohrpost) CLI). Git-native, so tickets branch and merge with the code and work offline; good for agent-heavy repos and for keeping work items in the same review as the diff
+- **Rohrpost**: issues live in the repo itself as an append-only event log under `.rohrpost/` (uses the [`rp`](https://github.com/ventrion/rohrpost) CLI). Git-native, so tickets branch and merge with the code and work offline; good for agent-heavy repos and for keeping work items in the same review as the diff
 - **Local markdown**: issues live as files under `.scratch/<feature>/` in this repo (good for solo projects or repos without a remote)
 - **Other** (Jira, Linear, etc.): ask the user to describe the workflow in one paragraph; the skill will record it as freeform prose
 

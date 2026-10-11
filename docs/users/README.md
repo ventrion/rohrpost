@@ -14,12 +14,12 @@ automation; the default human-readable output is for terminals.
 
 `rp` is a single static binary with no runtime requirements. Download the build
 for your platform from the
-[releases page](https://github.com/code-factorio/rohrpost/releases) — Linux
+[releases page](https://github.com/ventrion/rohrpost/releases) — Linux
 (x86_64, aarch64), macOS (Apple silicon, Intel), Windows (x86_64) — and put it
 on your `PATH`. Or build it yourself with a Rust toolchain (1.89+):
 
 ```bash
-cargo install --git https://github.com/code-factorio/rohrpost --locked
+cargo install --git https://github.com/ventrion/rohrpost --locked
 ```
 
 `rp` discovers the nearest `.rohrpost/` by walking up from the current directory,
